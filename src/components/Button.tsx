@@ -1,12 +1,7 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  Dimensions,
-  TouchableHighlight,
-} from 'react-native/types';
+import {StyleSheet, Text, Dimensions, TouchableHighlight} from 'react-native';
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   button: {
     fontSize: 40,
     height: Dimensions.get('window').width / 4,
@@ -22,7 +17,7 @@ const style = StyleSheet.create({
 function ButtonComponent(props: any): JSX.Element {
   return (
     <TouchableHighlight onAccessibilityAction={props.Onclick}>
-      <Text style={style.button}>{props.label}</Text>
+      <Text style={styles.button}>{props.label}</Text>
     </TouchableHighlight>
   );
 }
